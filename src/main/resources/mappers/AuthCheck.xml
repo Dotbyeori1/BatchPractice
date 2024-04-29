@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.nuriapp.demo.mapper.AuthCheckMapper">
+
+    <select id="findAll" resultType="com.nuriapp.demo.domain.AuthCheck">
+        SELECT * FROM auth_check
+    </select>
+
+    <insert id="insertAuthCheck" parameterType="com.nuriapp.demo.domain.AuthCheck">
+        INSERT INTO auth_check (authMethod, authResult) VALUES (#{authMethod}, #{authResult})
+    </insert>
+
+    <delete id="deleteAuthCheck">
+        DELETE FROM auth_check
+    </delete>
+
+</mapper>
